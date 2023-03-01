@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MyBookEventModelStoreContainer" CdmEntityContainer="MyBookEvent">
+    <EntitySetMapping Name="Login_Register">
+      <EntityTypeMapping TypeName="MyBookEventModel.Login_Register">
+        <MappingFragment StoreEntitySet="Login/Register">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Full_Name" ColumnName="Full Name" />
+          <ScalarProperty Name="E_mail" ColumnName="E-mail" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

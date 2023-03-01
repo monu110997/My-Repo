@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MyBookEventModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'MyBookEvent.dbo.Login/Register' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Login/Register">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Full Name" />
+      <PropertyRef Name="E-mail" />
+      <PropertyRef Name="Password" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Full Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="E-mail" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="MyBookEventModelStoreContainer">
+    <EntitySet Name="Login/Register" EntityType="Self.Login/Register" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Login/Register].[Id] AS [Id], 
+    [Login/Register].[Full Name] AS [Full Name], 
+    [Login/Register].[E-mail] AS [E-mail], 
+    [Login/Register].[Password] AS [Password]
+    FROM [dbo].[Login/Register] AS [Login/Register]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

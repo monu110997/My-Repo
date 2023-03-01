@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MyBookEventModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Create(Event)">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="Location" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Start Time" Type="time" Precision="7" />
+    <Property Name="Type(public/private)" Type="nvarchar" MaxLength="50" />
+    <Property Name="Duration in hours" Type="int" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Other Deatils" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Invite by Email" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Login/Register">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Full Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="E-mail" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="MyBookEventModel1StoreContainer">
+    <EntitySet Name="Create(Event)" EntityType="Self.Create(Event)" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Login/Register" EntityType="Self.Login/Register" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
